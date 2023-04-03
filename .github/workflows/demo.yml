@@ -1,12 +1,10 @@
-name: example
-  on:
-    push:
-        branches: [main]
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-        steps:
-            - name: Checkout
-              uses: actions/checkout@v2
-            - name: Hello World
-              run: echo "Hello, World!"
+name: Demo Workflow
+on: push
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print 1
+        run: hello
+      - name: Print 2
+        run: world
